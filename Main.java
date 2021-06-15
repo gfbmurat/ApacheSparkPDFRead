@@ -18,7 +18,7 @@ public class Main {
 
         // Transform
         FileConvert fc = new FileConvert();
-        String dosya = fc.convertPDFToText();
+        fc.convertPDFToText(); // PDF -> Text Dönüştürme
 
         // Actions
         Dataset<String> data = sparkSession.read().textFile(fc.getNewFilePath());
