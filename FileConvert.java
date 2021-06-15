@@ -7,7 +7,9 @@ import java.io.File;
 import java.io.PrintWriter;
 
 public class FileConvert {
-
+    
+    // FileConvert Sınıfı PDF Dosyayı Text'e Çevirmek İçin Yazılmıştır.
+    
     private String path;
     private String newFilePath;
     private String parsedText = null;
@@ -19,7 +21,7 @@ public class FileConvert {
         this.newFilePath = "C:/Users/aydn2/OneDrive/Masaüstü/pdf.txt";
     }
 
-    public String parseTextFromPdf(){
+    public String convertPDFToText(){
         try {
             File f = new File(this.getPath());
             pdfParser = new PDFParser(new org.apache.pdfbox.io.RandomAccessFile(f,"r"));
