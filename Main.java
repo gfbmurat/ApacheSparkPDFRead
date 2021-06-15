@@ -27,9 +27,6 @@ public class Main {
         Dataset<Row> countries = data.withColumn("countries", data.col("value"));
         Dataset<Row> countriesData = countries.select("countries");
         countriesData.show(10, false);
-        countriesData.createOrReplaceTempView("allcountry");
-        Dataset<Row> angola = sparkSession.sql("select * from allcountry where countries like 'Tur%'");
-        angola.show();
 
 
     }
