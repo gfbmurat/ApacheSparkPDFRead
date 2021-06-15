@@ -7,6 +7,8 @@ import org.apache.log4j.Level;
 
 public class Main {
 
+    // Spark ile Text Dosyası Okunarak Analiz İşlemleri Yapıldı.
+    
     public static void main(String[] args) {
 
         /* author : Murat Aydın Date : 14.06.2021 */
@@ -16,7 +18,7 @@ public class Main {
 
         // Transform
         FileConvert fc = new FileConvert();
-        String dosya = fc.parseTextFromPdf();
+        String dosya = fc.convertPDFToText();
 
         // Actions
         Dataset<String> data = sparkSession.read().textFile(fc.getNewFilePath());
